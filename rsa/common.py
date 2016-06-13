@@ -87,7 +87,7 @@ def extended_gcd(a, b):
     # r = gcd(a,b) i = multiplicitive inverse of a mod b
     #      or      j = multiplicitive inverse of b mod a
     # Neg return values for i or j are made positive mod b or a respectively
-    # Iterateive Version is faster and uses much less stack space
+    # Iterative Version is faster and uses much less stack space
     x = 0
     y = 1
     lx = 1
@@ -95,14 +95,14 @@ def extended_gcd(a, b):
     oa = a  # Remember original a/b to remove
     ob = b  # negative values from return results
     while b != 0:
-        q = a // b
+        q = a // b  # https://docs.python.org/2/library/operator.html   floordiv(a, b)
         (a, b) = (b, a % b)
         (x, lx) = ((lx - (q * x)), x)
         (y, ly) = ((ly - (q * y)), y)
     if lx < 0:
-        lx += ob  # If neg wrap modulo orignal b
+        lx += ob  # If neg wrap modulo original b
     if ly < 0:
-        ly += oa  # If neg wrap modulo orignal a
+        ly += oa  # If neg wrap modulo original a
     return a, lx, ly  # Return only positive values
 
 

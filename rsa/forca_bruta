@@ -1,0 +1,45 @@
+import time
+from math import sqrt
+from sys import argv
+
+def verifica_primo(n):
+
+    print "Inicio:",inicio
+    d=3
+    x=int(sqrt(n))
+    if n % 2 == 0:
+        print "E par"
+        return False
+
+    while d <= x:
+
+        print "d vale:",d
+        if n % d == 0:
+            print d, '*', n / d, '=', n
+            return (d,n/d,n)
+        else:
+            d += 2
+
+
+    return False
+
+
+
+print"Algoritmo de forca bruta..."
+# Conhecida a mensagem M e a chave publica e, achar a chave privada d, sabendo que n=pq e (
+
+#https://www.vivaolinux.com.br/artigo/Quebrando-a-criptografia-RSA?pagina=3
+#teste de conceito para um numero pequeno
+m_teste=92
+p_teste=11
+q_teste=13
+n_teste=p_teste*q_teste
+e_teste=17
+#chave publica(17,43)
+
+
+
+duracao=verifica_primo(n_teste)
+
+exit(0)
+

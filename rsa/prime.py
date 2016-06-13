@@ -71,7 +71,7 @@ def miller_rabin_primality_testing(n, k):
     applying Miller-Rabin primality testing.
 
     For reference and implementation example, see:
-    https://en.wikipedia.org/wiki/Miller%E2%80%93Rabin_primality_test
+    #
 
     :param n: Integer to be tested for primality.
     :type n: int
